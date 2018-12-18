@@ -1,0 +1,94 @@
+﻿<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<style type="text-align:center; ">
+		@font-face {
+			font-family: digit;
+			src: url('digital-7_mono.ttf') format("truetype");
+		}
+	</style>
+<meta name="keywords" content="" />
+<meta name="description" content="" />	<link href="css/default.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/garden.js"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
+	
+	<script type="text/javascript" src="js/jq.snow.js"></script>
+</head> 
+
+<body>
+	<script>
+	$(function(){
+		$.fn.snow({ 
+			minSize: 5,		
+			maxSize: 50, 	
+			newOn: 150		
+		});
+	});
+	</script>
+	<div id="mainDiv">
+		<div id="content">
+            <div id="code">
+                <span class="comments">/**</span><big />
+                <span class="space" /><span class="comments">*zzh：提前祝你圣诞快乐，界面比较low，主要是因为你不是女的，开个玩笑，my friend </span><big />
+                <br />
+            </div>
+			<div id="loveHeart">
+				<canvas id="garden"></canvas>
+				<div id="words">
+					<div id="messages">
+						     
+						<div id="elapseClock"></div>
+					</div>
+					<div id="loveu">
+						<div class="signature"></div>
+					</div>
+				</div>
+
+
+				     </div>
+				</div>
+			</div>
+</div>
+	<div class="bg1">	
+		<div class="main">
+			<footer style="line-height:20px">
+                <div id="copyright">
+                     <a href='' target="_blank"></a> 
+                    <a href="" target="_blank"></a>
+                    <a href="" target="_blank"></a>
+                </object>
+                </div>
+		</div>
+	</div>
+</div>
+
+	<script type="text/javascript">
+		var offsetX = $("#loveHeart").width() / ;
+		var offsetY = $("#loveHeart").height() / 
+		
+		if (!document.createElement('canvas').getContext) {
+			var msg = document.createElement("div");
+			msg.id = "errorMsg";
+			msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+			document.body.appendChild(msg);
+			$("#code").css("display", "none")
+			$("#copyright").css("position", "absolute");
+			$("#copyright").css("bottom", "10px");
+		    document.execCommand("stop");
+		} else {
+			setTimeout(function () {
+				startHeartAnimation();
+			}, 5000);
+
+			timeElapse(together);
+			setInterval(function () {
+				timeElapse(together);
+			}, 500);
+
+			adjustCodePosition();
+			$("#code").typewriter();
+		}
+	</script>
+</body>
+</html>
